@@ -1,33 +1,46 @@
-# Car Parking System
+# Parking Lot
 
-This project implements a car parking system in Java using object-oriented principles. The system can accommodate different types of vehicles and supports a configurable cost strategy. It provides functionalities such as initializing the parking lot, adding and removing vehicles, checking availability of vehicle spaces, and more.
+This Java project implements a car parking system that can accommodate different types of vehicles and supports configurable cost strategies.
 
-## Project Structure
+## Features
 
-The project is organized into the following packages:
-
-- `com.parking.model`: Contains classes representing the core models of the parking system, such as vehicles, floors, parking lot, and vehicle spaces.
-- `com.parking.service`: Contains the `ParkingService` class which provides methods to interact with the parking lot.
-- `com.parking`: Contains the `Main` class which demonstrates the usage of the parking lot and its methods.
-
-## Classes
-
-- `CostStrategy`: Represents the cost strategy for parking, providing a method to calculate parking cost.
-- `Floor`: Represents a floor in the parking lot with attributes like floor number, capacity for each vehicle type, and vehicle spaces.
-- `ParkingLot`: Represents the parking lot and manages floor instances.
-- `Vehicle`: Represents a vehicle with attributes such as registration number and type.
-- `VehicleSpace`: Represents a space for a vehicle with attributes like space number, availability, and vehicle type.
-- `ParkingService`: Provides methods to interact with the parking lot, such as parking a vehicle, removing a vehicle, and checking token validity.
-- `Main`: Contains the main method to demonstrate the usage of the parking lot and its methods.
+- **Initialize Parking Lot**: Initialize the parking lot with a given number of floors and car spaces per floor.
+- **Add Vehicle**: Add vehicle details to the parking lot, including the vehicle type, registration number, and color.
+- **Remove Vehicle**: Remove a vehicle from the parking lot based on the registration number.
+- **Check Availability**: Check the availability of vehicle spaces on a specific floor for a given vehicle type.
 
 ## Usage
 
-1. Initialize the parking lot using the `ParkingService` constructor, specifying the number of floors and spaces per floor.
-2. Use the `parkVehicle` method of `ParkingService` to add vehicles to the parking lot.
-3. Use the `removeVehicle` method of `ParkingService` to remove vehicles from the parking lot.
-4. Use the `isTokenValid` method of `ParkingService` to check the validity of a token.
+### Initialization
 
-## Testing
+Initialize the parking lot with the desired number of floors and vehicle spaces per floor for each vehicle type.
 
-The `Main` class provides a sample usage scenario demonstrating the functionalities of the parking system. You can test the project further by adding more vehicles, removing vehicles, and observing the behavior under various scenarios.
+### Add Vehicle
 
+Add a vehicle to the parking lot by providing its type, registration number, color, and the floor number to park on.
+
+### Remove Vehicle
+
+Remove a vehicle from the parking lot by specifying its registration number.
+
+### Check Availability
+
+Check the availability of vehicle spaces on a specific floor for a given vehicle type.
+
+## Implementation Details
+
+- The project is organized into packages, each representing different aspects of the parking lot system, such as `parkinglot`, `coststrategy`, etc.
+- Main functionality is implemented in classes such as `ParkingLot`, `Vehicle`, `Floor`, and `VehicleSpace`.
+- A `CostStrategy` class is provided for implementing various cost strategies for parking fees.
+- The code is designed to be easily extensible, allowing for the addition of new vehicle types or cost strategies with minimal changes.
+- Error handling is implemented to handle cases such as full parking capacity.
+
+## How to Run
+
+1. Clone the repository to your local machine.
+   ```
+   git clone https://github.com/your-username/parking-lot.git
+   ```
+2. Open the project in your preferred Java IDE.
+3. Compile and run the `Main` class to execute the car parking system.
+4. Follow the on-screen prompts to interact with the parking lot functionalities.
