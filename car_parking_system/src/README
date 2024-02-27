@@ -1,33 +1,40 @@
-# Car Parking System
+#Parking_System
 
 This project implements a car parking system in Java using object-oriented principles. The system can accommodate different types of vehicles and supports a configurable cost strategy. It provides functionalities such as initializing the parking lot, adding and removing vehicles, checking availability of vehicle spaces, and more.
 
-## Project Structure
+#Project_Structure
 
 The project is organized into the following packages:
 
-- `com.parking.model`: Contains classes representing the core models of the parking system, such as vehicles, floors, parking lot, and vehicle spaces.
-- `com.parking.service`: Contains the `ParkingService` class which provides methods to interact with the parking lot.
-- `com.parking`: Contains the `Main` class which demonstrates the usage of the parking lot and its methods.
+1. com.parking.model:- Contains classes representing the core models of the parking system, such as vehicles, floors, parking lot, and vehicle spaces.
 
-## Classes
+2. com.parking.service:- Contains the `ParkingService` class which provides methods to interact with the parking lot.
 
-- `CostStrategy`: Represents the cost strategy for parking, providing a method to calculate parking cost.
-- `Floor`: Represents a floor in the parking lot with attributes like floor number, capacity for each vehicle type, and vehicle spaces.
-- `ParkingLot`: Represents the parking lot and manages floor instances.
-- `Vehicle`: Represents a vehicle with attributes such as registration number and type.
-- `VehicleSpace`: Represents a space for a vehicle with attributes like space number, availability, and vehicle type.
-- `ParkingService`: Provides methods to interact with the parking lot, such as parking a vehicle, removing a vehicle, and checking token validity.
-- `Main`: Contains the main method to demonstrate the usage of the parking lot and its methods.
+3. com.parking:- Contains the `Main` class which demonstrates the usage of the parking lot and its methods.
 
-## Usage
+#Classes
+
+1. CostStrategy:- Represents the cost strategy for parking, providing a method to calculate parking cost.
+
+2. Floor:- Represents a floor in the parking lot with attributes like floor number, capacity for each vehicle type, and vehicle spaces.
+
+3. ParkingLot:- Represents the parking lot and manages floor instances.
+
+4. Vehicle:- Represents a vehicle with attributes such as registration number and type.
+
+5. VehicleSpace:- Represents a space for a vehicle with attributes like space number, availability, and vehicle type.
+
+6. ParkingService :- Provides methods to interact with the parking lot, such as parking a vehicle, removing a vehicle, and checking token validity.
+
+7. Main :- Contains the main method to demonstrate the usage of the parking lot and its methods.
+
+#Usage
 
 1. Initialize the parking lot using the `ParkingService` constructor, specifying the number of floors and spaces per floor.
 2. Use the `parkVehicle` method of `ParkingService` to add vehicles to the parking lot.
 3. Use the `removeVehicle` method of `ParkingService` to remove vehicles from the parking lot.
 4. Use the `isTokenValid` method of `ParkingService` to check the validity of a token.
 
-## Testing
+#Testing
 
 The `Main` class provides a sample usage scenario demonstrating the functionalities of the parking system. You can test the project further by adding more vehicles, removing vehicles, and observing the behavior under various scenarios.
-
